@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['style']">TP1</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [routerLink]="['cv']" routerLinkActive="active">CvTech</a>
+      <a class="nav-item nav-link" [routerLink]="['style']" routerLinkActive="active">Style</a>
+      <a class="nav-item nav-link" [hidden]="loggedIn" [routerLink]="['login']" routerLinkActive="active">Login</a>
+      <button class="nav-item nav-link" (click)="logout()" [hidden]="!loggedIn" >Logout</button>
+    </div>
+  </div>
+</nav>
